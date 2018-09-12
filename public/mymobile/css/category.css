@@ -1,0 +1,14 @@
+.mui-content {
+  width: 100%;
+}
+.mui-content .left {
+  width: 100px;
+  margin-top: 44px;
+  margin-bottom: 50px;
+}
+.mui-content .right {
+  width: 100%;
+  margin-left: 100px;
+  margin-top: 44px;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.header {
+  background-color: #006699;
+}
+.header h1 {
+  color: #fff;
+}
+.header .search,
+.header .back {
+  color: #fff;
+}
+.footer {
+  background-color: #006699;
+}
+.footer a span {
+  color: #fff;
+}
+.footer a.mui-active span {
+  color: darkorange;
+}
