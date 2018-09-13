@@ -24,3 +24,9 @@ ul {
 .footer a.mui-active span {
   color: darkorange;
 }
+.my-content {
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+}

@@ -8,26 +8,23 @@
   <link rel="stylesheet" href="assets/mui/css/mui.min.css">
   <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/search.css">
   <script src="assets/mui/js/mui.min.js"></script>
   <script src="assets/zepto/zepto.min.js"></script>
-  <script src="assets/artTemplate/template-web.js"></script>
-  <script src="js/category.js"></script>
-
+  <script src="js/search.js"></script>
 </head>
 
 <body>
   <header class="mui-bar mui-bar-nav header">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
-    <h1 class="mui-title">网页标题</h1>
-    <a href="search.html" class="mui-icon mui-icon-search mui-pull-right search"></a>
+    <h1 class="mui-title">搜索中心</h1>
   </header>
   <nav class="mui-bar mui-bar-tab footer">
-    <a class="mui-tab-item" href="index.html">
+    <a class="mui-tab-item mui-active" href="index.html">
       <span class="mui-icon mui-icon-home"></span>
       <span class="mui-tab-label">首页</span>
     </a>
-    <a class="mui-tab-item mui-active" href="category.html">
+    <a class="mui-tab-item" href="category.html">
       <span class="mui-icon mui-icon-bars"></span>
       <span class="mui-tab-label">分类</span>
     </a>
@@ -41,40 +38,24 @@
     </a>
   </nav>
   <div class="my-content">
-    <div class="left">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <div class="leftCate">
-
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <div class="content">
+          <div class="search">
+            <input type="text" placeholder="搜索您喜欢的商品">
+            <input type="button" value="搜索">
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <div class="rightCate">
-
+          <div class="hostory">
+            <span>搜索历史</span>
+            <span class="mui-pull-right mui-icon mui-icon-trash">清空历史</span>
           </div>
+          <ul class="mui-table-view">
+             
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </body>
-
-<script type="text/template" id="leftCateTpl">
-  {{each rows}}
-  <a href="javascript:;" id="{{$value.id}}">{{$value.categoryName}}</a>
-  {{/each}}
-</script>
-
-<script type="text/template" id="rightCateTpl">
-  {{each rows}}
-  <a href="javascript:;">
-    <img src="{{$value.brandLogo}}" alt="">
-    <span>{{$value.brandName}}</span>
-  </a>
-  {{/each}}
-</script>
 
 </html>
