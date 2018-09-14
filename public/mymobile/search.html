@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/search.css">
   <script src="assets/mui/js/mui.min.js"></script>
   <script src="assets/zepto/zepto.min.js"></script>
+  <script src="assets/artTemplate/template-web.js"></script>
   <script src="js/search.js"></script>
 </head>
 
@@ -42,20 +43,26 @@
       <div class="mui-scroll">
         <div class="content">
           <div class="search">
-            <input type="text" placeholder="搜索您喜欢的商品">
-            <input type="button" value="搜索">
+            <input type="text" id="searchBox" placeholder="搜索您喜欢的商品">
+            <input type="button" id="btnSearch" value="搜索">
           </div>
           <div class="hostory">
             <span>搜索历史</span>
-            <span class="mui-pull-right mui-icon mui-icon-trash">清空历史</span>
+            <span class="mui-pull-right mui-icon mui-icon-trash historyDel">清空历史</span>
           </div>
-          <ul class="mui-table-view">
-             
+          <ul class="mui-table-view hisResult">
           </ul>
         </div>
       </div>
     </div>
   </div>
 </body>
+<script type="text/template" id="historykey">
+  {{each keyword}}
+  <li class="mui-table-view-cell">
+    <a class="mui-navigate-right">{{$value}}</a>
+  </li>
+  {{/each}}
+</script>
 
 </html>

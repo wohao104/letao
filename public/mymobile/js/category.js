@@ -35,6 +35,7 @@ $(function () {
       success: function (response) {
         if (response.rows) {
           var html = template('rightCateTpl', response);
+          console.log(response)
           $('.rightCate').html(html);
         } else {
           $('.rightCate').html('暂无数据');
