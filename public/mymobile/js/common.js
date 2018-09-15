@@ -2,7 +2,11 @@ $(function () {
 
   mui('.mui-scroll-wrapper').scroll({
 		deceleration: 0.0005
-	});
+  });
+  
+  mui('body').on('tap','a',function(){
+    mui.openWindow({url:this.href});
+  })
   
   
 })

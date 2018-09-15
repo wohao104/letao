@@ -1,0 +1,13 @@
+.my-content {
+  background-color: #fff;
+}
+.my-content .pic li a div {
+  font-size: 14px;
+}
+.my-content .text li a {
+  display: block;
+  font-size: 14px;
+}
+.my-content .text li .login {
+  text-align: center;
+}

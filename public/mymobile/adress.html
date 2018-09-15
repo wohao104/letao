@@ -8,27 +8,26 @@
   <link rel="stylesheet" href="assets/mui/css/mui.min.css">
   <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/adress.css">
   <script src="assets/mui/js/mui.min.js"></script>
-  <script src="assets/zepto/zepto.min.js"></script>
   <script src="assets/artTemplate/template-web.js"></script>
+  <script src="assets/zepto/zepto.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/category.js"></script>
-
+  <script src="js/adress.js"></script>
 </head>
 
 <body>
   <header class="mui-bar mui-bar-nav header">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
-    <h1 class="mui-title">乐淘云购</h1>
-    <a href="search.html" class="mui-icon mui-icon-search mui-pull-right search"></a>
+    <h1 class="mui-title">收货地址管理</h1>
+    <a href="javascrupt:;" class="mui-icon mui-icon-search mui-pull-right search"></a>
   </header>
   <nav class="mui-bar mui-bar-tab footer">
     <a class="mui-tab-item" href="index.html">
       <span class="mui-icon mui-icon-home"></span>
       <span class="mui-tab-label">首页</span>
     </a>
-    <a class="mui-tab-item mui-active" href="category.html">
+    <a class="mui-tab-item" href="category.html">
       <span class="mui-icon mui-icon-bars"></span>
       <span class="mui-tab-label">分类</span>
     </a>
@@ -36,46 +35,19 @@
       <span class="mui-icon fa fa-shopping-cart"></span>
       <span class="mui-tab-label">购物车</span>
     </a>
-    <a class="mui-tab-item" href="user.html">
+    <a class="mui-tab-item mui-active" href="user.html">
       <span class="mui-icon mui-icon-person"></span>
       <span class="mui-tab-label">会员中心</span>
     </a>
   </nav>
   <div class="my-content">
-    <div class="left">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <div class="leftCate">
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <div class="rightCate">
-
-          </div>
-        </div>
-      </div>
-    </div>
+      <ul class="mui-table-view">
+          <li class="mui-table-view-cell">
+              <a>添加收货地址</a>
+          </li>
+      </ul>
   </div>
+
 </body>
-
-<script type="text/template" id="leftCateTpl">
-  {{each rows}}
-  <a href="javascript:;" id="{{$value.id}}">{{$value.categoryName}}</a>
-  {{/each}}
-</script>
-
-<script type="text/template" id="rightCateTpl">
-  {{each rows}}
-  <a href="javascript:;">
-    <img src="{{$value.brandLogo}}" alt="">
-    <span>{{$value.brandName}}</span>
-  </a>
-  {{/each}}
-</script>
 
 </html>

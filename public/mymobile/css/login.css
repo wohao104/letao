@@ -1,0 +1,29 @@
+.my-content {
+  background-color: #fff;
+}
+.my-content form {
+  overflow: hidden;
+  padding: 10px;
+}
+.my-content form label {
+  font-size: 14px;
+}
+.my-content form .mui-btn-primary {
+  width: 100%;
+  border: none;
+  background-color: #006699;
+  margin: 10px 0;
+}
+.my-content form .register {
+  padding-right: 10px;
+  margin-top: 20px;
+  color: #006699;
+  font-size: 14px;
+}
+.my-content form .getcode {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #006699;
+  font-size: 14px;
+}

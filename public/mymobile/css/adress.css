@@ -1,0 +1,9 @@
+.my-content {
+  background-color: #fff;
+}
+.my-content ul li {
+  text-align: center;
+}
+.my-content ul li a {
+  font-size: 14px;
+}
