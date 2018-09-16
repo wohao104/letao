@@ -1,0 +1,11 @@
+.my-content {
+  background-color: #fff;
+}
+.my-content .confirm {
+  display: block;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: #000000;
+  font-size: 14px;
+}

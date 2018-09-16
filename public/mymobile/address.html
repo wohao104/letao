@@ -6,23 +6,29 @@
   <title>Document</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+  <link rel="stylesheet" href="assets/mui/css/mui.picker.css">
+  <link rel="stylesheet" href="assets/mui/css/mui.poppicker.css">
   <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/address.css">
   <script src="assets/mui/js/mui.min.js"></script>
-  <script src="assets/zepto/zepto.min.js"></script>
+  <script src="assets/mui/js/mui.picker.js"></script>
+  <script src="assets/mui/js/mui.poppicker.js"></script>
   <script src="assets/artTemplate/template-web.js"></script>
+  <script src="assets/zepto/zepto.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/search.js"></script>
+  <script src="js/city.js"></script>
+  <script src="js/address.js"></script>
 </head>
 
 <body>
   <header class="mui-bar mui-bar-nav header">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
-    <h1 class="mui-title">搜索中心</h1>
+    <h1 class="mui-title">添加地址管理</h1>
+    <a href="javascrupt:;" class="mui-icon mui-icon-search mui-pull-right search"></a>
   </header>
   <nav class="mui-bar mui-bar-tab footer">
-    <a class="mui-tab-item mui-active" href="index.html">
+    <a class="mui-tab-item" href="index.html">
       <span class="mui-icon mui-icon-home"></span>
       <span class="mui-tab-label">首页</span>
     </a>
@@ -34,36 +40,31 @@
       <span class="mui-icon fa fa-shopping-cart"></span>
       <span class="mui-tab-label">购物车</span>
     </a>
-    <a class="mui-tab-item" href="user.html">
+    <a class="mui-tab-item mui-active" href="user.html">
       <span class="mui-icon mui-icon-person"></span>
       <span class="mui-tab-label">会员中心</span>
     </a>
   </nav>
   <div class="my-content">
-    <div class="mui-scroll-wrapper">
-      <div class="mui-scroll">
-        <div class="content">
-          <div class="search">
-            <input type="text" id="searchBox" placeholder="搜索您喜欢的商品">
-            <input type="button" id="btnSearch" value="搜索">
-          </div>
-          <div class="hostory">
-            <span>搜索历史</span>
-            <span class="mui-pull-right mui-icon mui-icon-trash historyDel">清空历史</span>
-          </div>
-          <ul class="mui-table-view hisResult">
-          </ul>
-        </div>
+    <div class="mui-input-group">
+      <div class="mui-input-row">
+          <input type="text" class="mui-input-clear" id="recipients" placeholder="收货人姓名">
       </div>
-    </div>
+      <div class="mui-input-row">
+          <input type="text" class="mui-input-clear" id="postcode" placeholder="邮编">
+      </div>
+      <div class="mui-input-row">
+          <input type="text" readonly class="mui-input-clear" id="address" placeholder="省市区">
+      </div>
+      <div class="mui-input-row">
+          <input type="text" class="mui-input-clear" id="addressDetail" placeholder="详细地址">
+      </div>
+      <div class="mui-input-row">
+        <a href="javascript:;" class="confirm">确认</a>
+      </div>
   </div>
+  </div>
+
 </body>
-<script type="text/template" id="historykey">
-  {{each keyword}} 
-  <li class="mui-table-view-cell">
-    <a class="mui-navigate-right" href='searchList.html?id={{$value}}' >{{$value}}</a>
-  </li>
-  {{/each}}
-</script>
 
 </html>

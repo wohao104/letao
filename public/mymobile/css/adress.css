@@ -7,3 +7,6 @@
 .my-content ul li a {
   font-size: 14px;
 }
+.my-content ul li a .content {
+  text-align: left;
+}

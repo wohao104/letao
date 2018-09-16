@@ -1,0 +1,85 @@
+.my-content {
+  background-color: #fff;
+}
+.my-content .mui-slider-group img {
+  display: block;
+}
+.my-content .detail-title {
+  padding: 10px;
+  font-size: 16px;
+}
+.my-content .detail-price {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.my-content .detail-price .new {
+  font-size: 24px;
+  color: #ea543d;
+  padding-right: 10px;
+}
+.my-content .detail-price .old {
+  color: #ccc;
+  text-decoration: line-through;
+}
+.my-content .detail-size {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.my-content .detail-size span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.my-content .detail-size .active {
+  background-color: #fa672d;
+}
+.my-content .detail-num {
+  padding: 10px;
+  font-size: 14px;
+}
+.my-content .detail-num span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  text-align: center;
+}
+.my-content .detail-num input {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  vertical-align: top;
+  text-align: center;
+}
+.my-content .detail-buttons {
+  padding: 10px;
+}
+.my-content .detail-buttons * {
+  display: inline-block;
+  width: 50%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+}
+.my-content .detail-buttons a {
+  background-color: #fa672d;
+}
+.my-content .detail-buttons span {
+  background-color: #991020;
+}

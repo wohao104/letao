@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="assets/mui/css/mui.min.css">
   <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/detail.css">
   <script src="assets/mui/js/mui.min.js"></script>
   <script src="assets/zepto/zepto.min.js"></script>
   <script src="assets/artTemplate/template-web.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/search.js"></script>
+  <script src="js/detail.js"></script>
 </head>
 
 <body>
   <header class="mui-bar mui-bar-nav header">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back"></a>
-    <h1 class="mui-title">搜索中心</h1>
+    <h1 class="mui-title">商品详情</h1>
   </header>
   <nav class="mui-bar mui-bar-tab footer">
     <a class="mui-tab-item mui-active" href="index.html">
@@ -40,30 +40,40 @@
     </a>
   </nav>
   <div class="my-content">
-    <div class="mui-scroll-wrapper">
-      <div class="mui-scroll">
-        <div class="content">
-          <div class="search">
-            <input type="text" id="searchBox" placeholder="搜索您喜欢的商品">
-            <input type="button" id="btnSearch" value="搜索">
-          </div>
-          <div class="hostory">
-            <span>搜索历史</span>
-            <span class="mui-pull-right mui-icon mui-icon-trash historyDel">清空历史</span>
-          </div>
-          <ul class="mui-table-view hisResult">
-          </ul>
+   
+  </div>
+
+  <script type="text/template" id="product">
+    <div class="mui-slider">
+        <div class="mui-slider-group">
+          {{each pic}}
+          <div class="mui-slider-item"><a href="javascript:;"><img src="{{$value.picAddr}}" /></a></div>
+          {{/each}}
         </div>
       </div>
-    </div>
-  </div>
-</body>
-<script type="text/template" id="historykey">
-  {{each keyword}} 
-  <li class="mui-table-view-cell">
-    <a class="mui-navigate-right" href='searchList.html?id={{$value}}' >{{$value}}</a>
-  </li>
-  {{/each}}
-</script>
+      <div class="detail-title">
+        {{proName}}
+      </div>
+      <div class="detail-price">
+        价格：<span class="new">¥{{price}}</span><span class="old">¥{{oldPrice}}</span>
+      </div>
+      <div class="detail-size">
+        尺码：
+        <% var sizes = size.split('-')
+          for(var i = sizes[0]; i <= sizes[1] ; i++){ %>
+        <span>{{i}}</span>
+         <% } %>
+      </div>
+      <div class="detail-num">
+        数量：<span class="reduce">-</span><input type="text" class="num" value="1"><span class="plus">+</span>
+        剩余：<i>{{num}}</i>件
+      </div>
+      <div class="detail-buttons">
+        <a href="#">查看购物车</a><span id="addCart">加入购物车</span>
+      </div>
+  
+  
+  </script>
 
+</body>
 </html>

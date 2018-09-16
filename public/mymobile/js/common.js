@@ -12,7 +12,7 @@ $(function () {
 })
     function getKeyword(prase, key) {
       var data = prase.substr(prase.indexOf('?') + 1).split('&');
-      for (let i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
         var arr = data[i].split('=');
         if (arr[0] == key) {
           return arr[1];
